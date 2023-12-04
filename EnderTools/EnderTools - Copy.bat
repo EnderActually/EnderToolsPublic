@@ -1,6 +1,6 @@
 @echo off
 title Ender's Tools
-SET MYVERSION=0.0.2
+SET MYVERSION=0.0.1
 GOTO INITIALIZE
 
 :INITIALIZE
