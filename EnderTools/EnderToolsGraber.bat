@@ -1,5 +1,6 @@
 @echo off
 title Ender's Tools
+pause
 GOTO INITIALIZE
 
 :INITIALIZE
