@@ -9,5 +9,5 @@ SET STATUS=2
 SET DLINK=https://raw.githubusercontent.com/EnderActually/EnderToolsPublic/main/EnderTools/EnderTools.bat
 powershell "Import-Module BitsTransfer; Start-BitsTransfer '%DLINK%' '%userprofile%\desktop'"
 SET STATUS=2
-pause
+
 Call %LAUNCHRDIR%
