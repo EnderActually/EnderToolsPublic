@@ -1,7 +1,7 @@
 @echo off
 title Ender's Tools
 GOTO MAINMENU
-
+SET WELCOME= Welcome to Ender's Tools.
 :MAINMENU
 cls
 echo %WELCOME%
@@ -64,6 +64,11 @@ GOTO MAINMENU
 
 :EPIC
 cls
+echo Are you sure you want to download: %DLNAME%
+echo 1)Yes	2)No
+SET /P INPUT=
+IF %INPUT%==2 GOTO MAINMENU
+cls
 Echo Installing Epic Setup
 if not exist "%userprofile%\Desktop\Epic" mkdir "%userprofile%\Desktop\Epic"
 if not exist "%DL%\EpicSetup.exe" powershell "Import-Module BitsTransfer; Start-BitsTransfer 'https://launcher-public-service-prod06.ol.epicgames.com/launcher/api/installer/download/EpicGamesLauncherInstaller.msi' '%DL%\EpicSetup.exe'"
@@ -90,6 +95,11 @@ IF %INPUT%==4 GOTO GAMES
 GOTO MINECRAFT
 
 :MCL
+cls
+echo Are you sure you want to download: %DLNAME%
+echo 1)Yes	2)No
+SET /P INPUT=
+IF %INPUT%==2 GOTO MAINMENU
 cls
 if not exist "%CD%\Launcher\AppData\.minecraft" mkdir "%CD%\Launcher\AppData\.minecraft"
 if not exist "%CD%\Launcher\Minecraft" mkdir "%CD%\Launcher\Minecraft"
@@ -160,6 +170,7 @@ echo Are you sure you want to download: %DLNAME%
 echo 1)Yes	2)No
 SET /P INPUT=
 IF %INPUT%==2 GOTO MAINMENU
+cls
 echo Installing %DLNAME%
 if not exist "%DL%\%DLEXE%" powershell "Import-Module BitsTransfer; Start-BitsTransfer '%DLINK%' '%DL%\%DLEXE%'"
 echo %DLNAME% has been installed
