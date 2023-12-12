@@ -18,11 +18,11 @@ if not exist "%SYS%" mkdir "%SYS%"
 if exist "%SYS%\EnderToolsGraber.bat" DEL /Q "%SYS%\EnderToolsGraber.bat"
 if exist "%SYS%\EnderToolsData.bat" DEL /Q "%SYS%\EnderToolsData.bat"
 
-cls 
+cls
 echo Starting...
 SET DLINK=https://raw.githubusercontent.com/EnderActually/EnderToolsPublic/main/EnderTools/EnderToolsData.bat
 powershell "Import-Module BitsTransfer; Start-BitsTransfer '%DLINK%' '%SYS%\EnderToolsData.bat'"
-cls 
+cls
 echo Starting...
 SET DLINK=https://raw.githubusercontent.com/EnderActually/EnderToolsPublic/main/EnderTools/EnderToolsGraber.bat
 powershell "Import-Module BitsTransfer; Start-BitsTransfer '%DLINK%' '%SYS%\EnderToolsGraber.bat'"

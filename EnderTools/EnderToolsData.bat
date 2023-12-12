@@ -1,7 +1,7 @@
 @echo off
 title Ender's Tools
 SET WELCOME=Welcome to Ender's Tools.
-IF not %STATUS%==2 EXIT
+rem IF not %STATUS%==2 EXIT
 GOTO MAINMENU
 :MAINMENU
 cls
