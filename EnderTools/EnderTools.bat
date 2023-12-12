@@ -12,11 +12,12 @@ echo Starting...
 SET DL=%temp%\EnderTools\Downloads
 SET SYS=%temp%\EnderTools\SYS
 SET LAUNCHRDIR=%0
-SET LAUNCHER=1
+SET STATUS=1
 if not exist "%DL%" mkdir "%DL%"
 if not exist "%SYS%" mkdir "%SYS%"
 if exist "%DL%\EnderToolsGraber.bat" DEL /Q "%DL%\EnderToolsGraber.bat"
 if exist "%DL%\EnderToolsData.bat" DEL /Q "%DL%\EnderToolsData.bat"
+
 echo Starting...
 SET DLINK=https://raw.githubusercontent.com/EnderActually/EnderToolsPublic/main/EnderTools/EnderToolsData.bat
 powershell "Import-Module BitsTransfer; Start-BitsTransfer '%DLINK%' '%DL%\EnderToolsData.bat'"
