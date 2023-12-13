@@ -54,6 +54,11 @@ Rem "Steam Script"
 
 :STEAM
 cls
+echo Are you sure you want to download: %DLNAME%
+echo 1)Yes	2)No
+SET /P INPUT=
+IF %INPUT%==2 GOTO MAINMENU
+cls
 Echo Installing Steam Setup
 if not exist "%userprofile%\Desktop\Steam" mkdir "%userprofile%\Desktop\Steam"
 if not exist "%DL%\SteamSetup.exe" powershell "Import-Module BitsTransfer; Start-BitsTransfer 'https://cdn.akamai.steamstatic.com/client/installer/SteamSetup.exe' '%DL%\SteamSetup.exe'"
@@ -171,6 +176,7 @@ PAUSE
 GOTO MAINMENU
 
 :DOWNLOAD
+cls
 echo Are you sure you want to download: %DLNAME%
 echo 1)Yes	2)No
 SET /P INPUT=
