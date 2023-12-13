@@ -59,6 +59,8 @@ if not exist "%userprofile%\Desktop\Steam" mkdir "%userprofile%\Desktop\Steam"
 if not exist "%DL%\SteamSetup.exe" powershell "Import-Module BitsTransfer; Start-BitsTransfer 'https://cdn.akamai.steamstatic.com/client/installer/SteamSetup.exe' '%DL%\SteamSetup.exe'"
 cls
 echo Steam has been installed
+echo -
+echo !!(Before you go, when it asks you where to install. Please install it to the new "Steam" folder in your "Desktop")!!
 PAUSE
 C:\Windows\System32\cmd.exe /min /C "set __COMPAT_LAYER=RUNASINVOKER && start "" "%DL%\SteamSetup.exe" --workDir "%userprofile%\Desktop\Steam 
 GOTO MAINMENU
@@ -75,6 +77,8 @@ if not exist "%userprofile%\Desktop\Epic" mkdir "%userprofile%\Desktop\Epic"
 if not exist "%DL%\EpicSetup.exe" powershell "Import-Module BitsTransfer; Start-BitsTransfer 'https://launcher-public-service-prod06.ol.epicgames.com/launcher/api/installer/download/EpicGamesLauncherInstaller.msi' '%DL%\EpicSetup.exe'"
 cls
 echo Epic has been installed
+echo -
+echo !!(Before you go, when it asks you where to install. Please install it to the new "Epic" folder in your "Desktop")!!
 PAUSE
 msiexec /i "%DL%\EpicSetup.exe" --workDir "%userprofile%\Desktop\Epic
 GOTO MAINMENU
