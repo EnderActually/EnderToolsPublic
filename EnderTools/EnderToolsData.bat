@@ -2,9 +2,9 @@
 title Ender's Tools
 SET WELCOME=Welcome to Ender's Tools.
 rem IF not %STATUS%==2 EXIT
-GOTO DEATH
+GOTO SORRY
 
-:DEATH
+:SORRY
 cls
 echo Unfortunately, due too administator control, I can not contiune progress on this project.
 echo Ender's Tools will be closed untill further notice.
@@ -15,7 +15,7 @@ echo - Ender, Creator of Ender's Tools.
 SET /P INPUT=
 IF %INPUT%==L3TM31N GOTO MAINMENU
 pause
-GOTO DEATH
+GOTO SORRY
 
 :MAINMENU
 cls
