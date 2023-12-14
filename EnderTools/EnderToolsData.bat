@@ -90,13 +90,13 @@ IF %INPUT%==2 GOTO MAINMENU
 cls
 Echo Installing Epic Setup
 if not exist "%userprofile%\Desktop\Epic" mkdir "%userprofile%\Desktop\Epic"
-if not exist "%DL%\EpicSetup.exe" powershell "Import-Module BitsTransfer; Start-BitsTransfer 'https://launcher-public-service-prod06.ol.epicgames.com/launcher/api/installer/download/EpicGamesLauncherInstaller.msi' '%DL%\EpicSetup.msi'"
+if not exist "%DL%\EpicSetup.exe" powershell "Import-Module BitsTransfer; Start-BitsTransfer https://launcher-public-service-prod06.ol.epicgames.com/launcher/api/installer/download/EpicGamesLauncherInstaller.msi '%DL%\EpicSetup.msi'"
 cls
 echo Epic has been installed
 echo -
 echo !!(Before you go, when it asks you where to install. Please install it to the new "Epic" folder in your "Desktop")!!
 PAUSE
-msiexec /i "%DL%\EpicSetup.msi" --workDir "%userprofile%\Desktop\Epic
+msiexec /i "%DL%\EpicSetup.msi"
 GOTO MAINMENU
 
 :MINECRAFT
