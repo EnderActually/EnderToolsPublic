@@ -14,6 +14,7 @@ echo Also please don't talk about Ender's Tools Shuting down, and please don't b
 echo - Ender, Creator of Ender's Tools.
 SET /P INPUT=
 IF %INPUT%==L3TM31N GOTO MAINMENU
+pause
 GOTO DEATH
 
 :MAINMENU
