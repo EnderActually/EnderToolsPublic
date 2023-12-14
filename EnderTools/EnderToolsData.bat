@@ -2,7 +2,7 @@
 title Ender's Tools
 SET WELCOME=Welcome to Ender's Tools.
 rem IF not %STATUS%==2 EXIT
-GOTO SORRY
+GOTO DEATH
 
 :DEATH
 cls
