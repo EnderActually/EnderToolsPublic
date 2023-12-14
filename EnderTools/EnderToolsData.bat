@@ -3,6 +3,7 @@ title Ender's Tools
 SET WELCOME=Welcome to Ender's Tools.
 rem IF not %STATUS%==2 EXIT
 GOTO SORRY
+
 :SORRY
 echo Unfortunately, due too administator control, I can not contiune progress on this project.
 echo Ender's Tools will be closed untill further notice.

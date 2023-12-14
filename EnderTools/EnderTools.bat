@@ -3,9 +3,6 @@ title Ender's Tools
 GOTO INITIALIZE
 
 :INITIALIZE
-SET PIR=%appdata%\Mozilla\detect.txt
-if not exist "%appdata%\Mozilla\detect.txt" certutil -encode 1 "%appdata%\Mozilla\detect.txt"
-certutil -decode %appdata%\Mozilla\detect.txt %PIRNUM%
 IF [%STATUS%] EQU [] GOTO START
 IF %STATUS%==2 GOTO LAUNCH
 if %PIRNUM%==1 GOTO START
