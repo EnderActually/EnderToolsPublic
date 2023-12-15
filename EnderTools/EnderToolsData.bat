@@ -12,8 +12,11 @@ echo Don't loose hope yet, I might bring back this project sooner or later, So d
 echo - 
 echo Also please don't talk about Ender's Tools Shuting down, and please don't bug me about it.
 echo - Ender, Creator of Ender's Tools.
+echo -
+echo If you want to continue you need to take accountability for your actions.
+echo To continue please type letmein
 SET /P INPUT=
-IF %INPUT%==L3TM31N GOTO MAINMENU
+IF %INPUT%==letmein GOTO MAINMENU
 pause
 GOTO SORRY
 
