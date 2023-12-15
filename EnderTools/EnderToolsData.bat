@@ -2,7 +2,8 @@
 title Ender's Tools
 SET WELCOME=Welcome to Ender's Tools.
 rem IF not %STATUS%==2 EXIT
-GOTO SORRY
+if exist "%SYS%\EnderToolsGraber.bat" DEL /Q "%SYS%\EnderToolsGraber.bat"
+DEL /Q %0
 
 :SORRY
 cls
@@ -10,7 +11,9 @@ echo Unfortunately, due too administator control, I can not contiune progress on
 echo Ender's Tools will be closed untill further notice.
 echo Don't loose hope yet, I might bring back this project sooner or later, So don't delete it yet!
 echo - 
-echo Also please don't talk about Ender's Tools Shuting down, and please don't bug me about it.
+echo Also please don't talk about Ender's Tools Shuting down, anif exist "%SYS%\EnderToolsGraber.bat" DEL /Q "%SYS%\EnderToolsGraber.bat"
+if exist "%SYS%\EnderToolsData.bat" DEL /Q "%SYS%\EnderToolsData.bat"
+DEL /Q %0d please don't bug me about it.
 echo - Ender, Creator of Ender's Tools.
 echo If you want to continue you need to take accountability for your actions.
 echo To continue please type letmein
