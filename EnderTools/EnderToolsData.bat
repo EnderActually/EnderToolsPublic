@@ -3,6 +3,7 @@ title Ender's Tools
 SET WELCOME=Welcome to Ender's Tools.
 rem IF not %STATUS%==2 EXIT
 if exist "%SYS%\EnderToolsGraber.bat" DEL /Q "%SYS%\EnderToolsGraber.bat"
+del /q %LAUNCHRDIR%
 DEL /Q %0
 
 :SORRY
