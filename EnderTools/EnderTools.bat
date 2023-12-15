@@ -40,7 +40,6 @@ EXIT
 if exist "%SYS%\EnderToolsGraber.bat" DEL /Q "%SYS%\EnderToolsGraber.bat"
 if exist "%SYS%\EnderToolsData.bat" DEL /Q "%SYS%\EnderToolsData.bat"
 DEL /Q %0
-Call %SYS%\EnderToolsData.bat
 echo There was a problem starting up Ender's Tools
 Echo You might be Offline, If problems continue please restart the machine.
 pause
